@@ -31,10 +31,10 @@ gem "thruster", require: false
 
 gem "aws-sdk-s3", require: false
 
-gem 'devise'
-gem 'jwt'
-gem 'bcrypt', '~> 3.1.7'
-gem 'dotenv'
+gem "devise"
+gem "jwt"
+gem "bcrypt", "~> 3.1.7"
+gem "dotenv"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
