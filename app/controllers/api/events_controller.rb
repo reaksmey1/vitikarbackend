@@ -1,5 +1,5 @@
 class Api::EventsController < Api::BaseController
-  before_action :authenticate_request, except: [:index, :show]
+  before_action :authenticate_request, except: [ :index, :show ]
 
   def index
     events = Event.includes(:organizer, gallery_images_attachments: :blob).all
@@ -67,4 +67,3 @@ class Api::EventsController < Api::BaseController
     }
   end
 end
-      

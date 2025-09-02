@@ -4,12 +4,12 @@ class Api::BaseController < ActionController::API
   private
 
   def authenticate_request
-    header = request.headers['Authorization']
-    header = header.split(' ').last if header
+    header = request.headers["Authorization"]
+    header = header.split(" ").last if header
     decoded = JsonWebToken.decode(header)
     @current_user = User.find(decoded[:user_id]) if decoded
   rescue ActiveRecord::RecordNotFound, JWT::DecodeError
-    render json: { errors: ['Not Authorized'] }, status: :unauthorized
+    render json: { errors: [ "Not Authorized" ] }, status: :unauthorized
   end
 
   def current_user
