@@ -2,7 +2,7 @@ class Api::RegistrationsController < ActionController::API
   def create
     user = User.new(signup_params)
     if user.save
-      render json: { message: "User has created successfully" }, status: :created
+      render json: { message: "User has now created successfully" }, status: :created
     else
       render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
