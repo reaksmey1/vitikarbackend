@@ -1,0 +1,18 @@
+{
+  "name": "Vitikar Rails API",
+  "description": "Vitikar Rails API deployed to Heroku",
+  "scripts": {
+    "postdeploy": "rails db:migrate"
+  },
+  "env": {
+    "RAILS_ENV": {
+      "value": "production"
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "value": "true"
+    }
+  },
+  "addons": [
+    "heroku-postgresql:essential-0"
+  ]
+}
